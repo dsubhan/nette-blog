@@ -1,0 +1,35 @@
+{block content}
+	<h1 n:block="title">My awesome blog</h1>
+
+	{snippet delete_render}
+			
+		<div n:foreach="$posts as $post" class="post">
+			<div n:snippet="post-{$post->id}">
+				<br>
+				<hr>
+				
+				<h2><a n:href="Post:show $post->id">{$post->title}</a></h2>
+				<div>{$post->content}</div>
+				<div class="date">{$post->created_at|date:'F j, Y'}</div>
+
+				<!-- pokud je přihlášen admin ukázka aktivní/neaktivní -->
+
+				<div n:if="$user->isLoggedIn()">
+				{if $post->aktivni == 1}
+				<i class="active">Aktivní</i>
+				{else}
+				<i class="inactive">Neaktivní</i>
+				{/if}
+				</div>
+
+				<!-- pokud je přihlášen admin-->
+
+				<a class="delete" n:href='Delete! $post->id' class="ajax" n:snippet="delete_b" n:if="$user->isLoggedIn()">Smazat</a>
+			</div>
+		</div>
+			
+	{/snippet}
+
+	
+	
+{/block}

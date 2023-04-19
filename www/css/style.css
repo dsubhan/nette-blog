@@ -1,0 +1,153 @@
+body {
+	font-family: 'Work Sans', sans-serif;
+	font-size: large;
+	margin: 0 auto;
+	width: 75vw;
+	color: #333;
+	background-color: #fff;
+}
+
+div.flash {
+	color: black;
+	background: #FFF9D7;
+	border: 1px solid #E2C822;
+	padding: 1em;
+	margin: 1em 0;
+}
+
+a[href^="#error:"] {
+	background: red;
+	color: white;
+}
+
+form th, form td {
+	vertical-align: top;
+	font-weight: normal;
+}
+
+form th {
+	text-align: right;
+}
+
+form .required label {
+	font-weight: bold;
+}
+
+form .error {
+	color: #D00;
+	font-weight: bold;
+}
+
+.inactive{
+	color: #D00;
+}
+
+.delete{
+	background-color: #D00;
+	color: whitesmoke;
+	padding: 3px;
+	border-radius: 5px;
+}
+
+.comments{
+	margin-bottom: 20px;
+}
+
+.hide{
+	display: none;
+}
+
+.active{
+	color: green;
+}
+
+.navig{
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+a{
+	text-decoration: none;
+	color: #333;
+}
+
+a:visited{
+	color:#333;
+}
+
+a.home{
+	padding: 5px 5px;
+	border-radius: 5px;
+	background-color: rgba(197, 197, 197, 0.786);
+}
+
+
+.new_post{
+	padding: 5px 5px;
+	border-radius: 5px;
+	background-color: rgba(120, 190, 247, 0.786);
+}
+
+.sign_out{
+	padding: 5px;
+	border-radius: 5px;
+	background-color: #D00;
+	color: whitesmoke;
+	border: none;
+	font-size: large;
+}
+.sign_out:visited{
+	color: whitesmoke;
+}
+
+.sign_in{
+	padding: 5px 5px;
+	border-radius: 5px;
+	background-color: rgb(21, 195, 215);
+	
+}
+
+select{
+	border: none;
+	background-color: lightgray;
+	padding: 3px;
+	border-radius: 3px;
+
+}
+
+h1{
+	margin-top: 25px;
+}
+
+table{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.button{
+	font-size: medium;
+	background-color: rgb(23, 192, 23);
+	padding: 3px;
+	border-radius: 5px;
+	border: none;
+}
+.button:hover{
+	cursor: pointer;
+}
+
+.text{
+	border: 1px solid #333;
+	padding: 3px;
+	border-radius: 5px;
+}
+
+textarea{
+	border: 1px solid #333;
+	padding: 3px;
+	border-radius: 5px;
+
+}

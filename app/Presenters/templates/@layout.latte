@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/6cc015b7d9.js" crossorigin="anonymous"></script>
+<script  n:if="$user->isLoggedIn()" src="{$basePath}/js/Naja.js"></script>
+<script n:if="$user->isLoggedIn()" src="{$basePath}/js/admin.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>{ifset title}{include title|stripHtml} | {/ifset}Nette Framework Micro-blog</title>
+
+	<link rel="stylesheet" href="{$basePath}/css/style.css">
+</head>
+
+<body>
+	<div class="navig">
+	
+		<a n:href="Homepage:" class="home">Domů</a>
+		{if $user->isloggedIn()}
+			<a n:href="NewPost:new" class="new_post">+ Nový příspěvek</a>
+			<a n:href="Sign:out" class="sign_out">Odhlásit se</a>
+		{else}
+			<a n:href="Sign:in" class="sign_in">Přihlásit se</a>
+		{/if}
+	</div>
+
+	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+
+	{include content}
+
+	{block scripts}
+	<!--<script src="https://nette.github.io/resources/js/3/netteForms.min.js"></script>-->
+	{/block}
+	<!-- pokud je přihlášen admin-->
+	
+
+</body>
+</html>
